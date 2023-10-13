@@ -69,6 +69,10 @@ isDense: true,
         }
         */
         _searchMealList =  MealsList.where((element) => element.title.toLowerCase().contains(value)).toList();
+        bool isGluton = filters['gluton']!;
+        bool isLuctose = filters['luctose']!;
+        bool isVegan = filters['vegan']!;
+        _searchMealList = _searchMealList.where((element) => element.isGluton == isGluton && element.isLuctose == isLuctose && element.isVegan == isVegan).toList();
       });
        
      },

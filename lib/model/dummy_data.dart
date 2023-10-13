@@ -1,6 +1,12 @@
 import './category.dart';
 import './meal.dart';
 
+ Map<String, bool> filters = {
+    'gluton': false,
+    'luctose': false,
+    'vegan': false,
+  };
+
 const categoryList = const [
   Category(
       id: 'c1',
@@ -1428,7 +1434,7 @@ const MealsList = const [
     id: 'm51',
     title: 'Kimchi stew ',
     imgURL:
-        'https://www.google.com/imgres?imgurl=https%3A%2F%2Fchefjulieyoon.com%2Fwp-content%2Fuploads%2F2016%2F01%2FSoondubu-19-1-500x375.jpg&tbnid=tCg3DD9XLuKTkM&vet=10CKMBEDMopAFqFwoTCIDK-tSR2oEDFQAAAAAdAAAAABAD..i&imgrefurl=https%3A%2F%2Fchefjulieyoon.com%2F2016%2F01%2Fkimchi-soondubu-jjigae-kimchi-soft-tofu-stew%2F&docid=a3LnP32TFznn5M&w=500&h=375&q=Kimchi%20stew&client=firefox-b-d&ved=0CKMBEDMopAFqFwoTCIDK-tSR2oEDFQAAAAAdAAAAABAD_',
+        'https://www.maangchi.com/wp-content/uploads/2014/09/kimchi.jpg',
     categories: ['c5', 'c6', 'c7', 'c8'],
     ingredients: [
       '1 pound kimchi, cut into bite size pieces',

@@ -21,11 +21,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  Map<String, bool> _filters = {
-    'gluton': false,
-    'luctose': false,
-    'vegan': false,
-  };
+ 
 
   List<Meal> availableMeals = MealsList;
   List<Meal> favoriteMeals = [];
@@ -52,14 +48,14 @@ class _MyAppState extends State<MyApp> {
 
   void _saveFilters(Map<String, bool> filterData) {
     setState(() {
-      _filters = filterData;
+      filters = filterData;
 
       availableMeals = MealsList.where((meal) {
-        if (_filters['gluton']! && !meal.isGluton) {
+        if (filters['gluton']! && !meal.isGluton) {
           return false;
-        } else if (_filters['luctose']! && !meal.isLuctose) {
+        } else if (filters['luctose']! && !meal.isLuctose) {
           return false;
-        } else if (_filters['vegan']! && !meal.isVegan) {
+        } else if (filters['vegan']! && !meal.isVegan) {
           return false;
         } else {
           return true;
@@ -102,7 +98,7 @@ class _MyAppState extends State<MyApp> {
             MealDetailScreen(_toggleFavorite, isFavoriteMeal),
         FilterScreen.routeName: (context) => FilterScreen(
               _saveFilters,
-              filters: _filters,
+              filters: filters,
             ),
       },
     );
