@@ -1,6 +1,8 @@
 import 'dart:developer';
 
 import 'package:cooking_app/screens/search_screen.dart';
+import 'package:cooking_app/screens/splash.dart';
+import 'package:cooking_app/themes/themes.dart';
 import 'package:cooking_app/widgets/meals_item.dart';
 import 'package:flutter/material.dart';
 import './screens/category_meals_screen.dart';
@@ -21,8 +23,6 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
- 
-
   List<Meal> availableMeals = MealsList;
   List<Meal> favoriteMeals = [];
 
@@ -31,18 +31,14 @@ class _MyAppState extends State<MyApp> {
   }
 
   void _toggleFavorite(String mealId) {
-  
     int existedIndex = favoriteMeals.indexWhere((meal) => meal.id == mealId);
 
     setState(() {
       if (existedIndex >= 0) {
-        
         favoriteMeals.removeAt(existedIndex);
       } else {
-        
         favoriteMeals.add(MealsList.firstWhere((meal) => meal.id == mealId));
       }
-      
     });
   }
 
@@ -70,26 +66,29 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       title: 'Cooking App',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: Color(0xfff6f4fa),
-          primary: Color.fromARGB(255, 245, 52, 45),
-          secondary: Color.fromARGB(255, 49, 69, 196),
-        ),
-        canvasColor: Colors.white,
-        fontFamily: 'Raleway',
-        textTheme: ThemeData.light().textTheme.copyWith(
-              bodyLarge: TextStyle(color: Color.fromARGB(148, 0, 0, 0)),
-              displayLarge: TextStyle(
-                fontFamily: "RobotoCondensed",
-                fontWeight: FontWeight.bold,
-                fontSize: 100,
-                color: Color(0xfff3C444C),
-              ),
-            ),
-      ),
-      initialRoute: '/',
+      theme: AppTheme.themeData,
+
+      // ThemeData(
+      //   colorScheme: ColorScheme.fromSeed(
+      //     seedColor: Color(0xfff6f4fa),
+      //     primary: Color.fromARGB(255, 245, 52, 45),
+      //     secondary: Color.fromARGB(255, 49, 69, 196),
+      //   ),
+      //   canvasColor: Colors.white,
+      //   fontFamily: 'Raleway',
+      //   textTheme: ThemeData.light().textTheme.copyWith(
+      //         bodyLarge: TextStyle(color: Color.fromARGB(148, 0, 0, 0)),
+      //         displayLarge: TextStyle(
+      //           fontFamily: "RobotoCondensed",
+      //           fontWeight: FontWeight.bold,
+      //           fontSize: 100,
+      //           color: Color(0xfff3C444C),
+      //         ),
+      //       ),
+      // ),
+      initialRoute: '/splash',
       routes: {
+        '/splash': (context) => SplashScreen(),
         '/': (context) => TabScreen(favoriteMeals),
         CategoryMealsScreen.routeName: (context) =>
             CategoryMealsScreen(availableMeals),

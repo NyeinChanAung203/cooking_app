@@ -8,14 +8,13 @@ class MainDrawer extends StatelessWidget {
     return ListTile(
       leading: Icon(
         icon,
-        size: 26,
+        size: 24,
       ),
       title: Text(
         title,
         style: TextStyle(
-          fontFamily: 'RobotoCondensed',
           fontSize: 24.0,
-          fontWeight: FontWeight.bold,
+          fontWeight: FontWeight.normal,
         ),
       ),
       onTap: tapHandler,
@@ -37,7 +36,7 @@ class MainDrawer extends StatelessWidget {
               style: TextStyle(
                 fontSize: 26,
                 fontWeight: FontWeight.w900,
-                color: Theme.of(context).colorScheme.secondaryContainer,
+                color: Theme.of(context).colorScheme.onPrimary,
               ),
             ),
           ),

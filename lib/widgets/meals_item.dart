@@ -14,7 +14,7 @@ class MealItem extends StatelessWidget {
     required this.duration,
     super.key,
   });
-  
+
   void navigateMealDetail(BuildContext context) {
     Navigator.of(context).pushNamed(
       routeName,
@@ -26,9 +26,9 @@ class MealItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(8),
-      
       alignment: Alignment.center,
       child: InkWell(
+        borderRadius: BorderRadius.circular(20),
         onTap: () => navigateMealDetail(context),
         child: Container(
           padding: const EdgeInsets.all(8),
@@ -37,7 +37,7 @@ class MealItem extends StatelessWidget {
             color: Colors.white,
             boxShadow: [
               BoxShadow(
-                color: Color.fromARGB(255, 185, 185, 185),
+                color: Colors.pink.withOpacity(0.2),
                 offset: Offset(1, 1),
                 blurRadius: 15,
               ),
@@ -48,16 +48,16 @@ class MealItem extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              
-              Container(
+              SizedBox(
                 height: 150,
-                
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: NetworkImage(imgURL),
-                    fit: BoxFit.cover,
-                  ),
-                  borderRadius: BorderRadius.circular(16),
+                child: Hero(
+                  tag: imgURL,
+                  child: ClipRRect(
+                      borderRadius: BorderRadius.circular(12),
+                      child: Image.asset(
+                        imgURL,
+                        fit: BoxFit.cover,
+                      )),
                 ),
               ),
               // SizedBox(height: 15),
@@ -65,13 +65,13 @@ class MealItem extends StatelessWidget {
                 '$title',
                 textAlign: TextAlign.center,
                 maxLines: 2,
-              overflow: TextOverflow.ellipsis,
+                overflow: TextOverflow.ellipsis,
                 style: TextStyle(
-                  fontSize: 18,
+                  fontSize: 16,
                   fontFamily: 'ro',
                 ),
               ),
-             
+
               Text(
                 '$duration min',
                 style: TextStyle(

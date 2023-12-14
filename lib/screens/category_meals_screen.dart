@@ -58,7 +58,7 @@ class _CategoryMealsScreenState extends State<CategoryMealsScreen> {
           itemCount: mealsByCategory.length,
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
-            childAspectRatio: 9/12,
+            mainAxisExtent: 250,
           ),
         ),
       ),

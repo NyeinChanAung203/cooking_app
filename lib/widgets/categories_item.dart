@@ -27,16 +27,19 @@ class CategoryItem extends StatelessWidget {
     return InkWell(
       onTap: () => navigateToMeals(context),
       splashColor: Theme.of(context).primaryColor,
-      borderRadius: BorderRadius.circular(25),
+      borderRadius: BorderRadius.circular(20),
       child: Container(
-        padding: const EdgeInsets.all(15),
+        // padding: const EdgeInsets.all(15),
         decoration: BoxDecoration(
-          color:  Colors.white,
-          border: Border.all(color: Colors.black),
-          borderRadius: BorderRadius.circular(25),
+          color: Colors.white,
+          border: Border.all(
+            color: Colors.pink.withOpacity(0.3),
+            width: 0.5,
+          ),
+          borderRadius: BorderRadius.circular(20),
           image: DecorationImage(
-            image: NetworkImage(imgURL),
-            fit: BoxFit.contain,
+            image: AssetImage(imgURL),
+            fit: BoxFit.cover,
           ),
         ),
       ),

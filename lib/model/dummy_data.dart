@@ -1,66 +1,32 @@
+import 'package:cooking_app/gen/assets.gen.dart';
+
 import './category.dart';
 import './meal.dart';
 
- Map<String, bool> filters = {
-    'gluton': false,
-    'luctose': false,
-    'vegan': false,
-  };
+Map<String, bool> filters = {
+  'gluton': false,
+  'luctose': false,
+  'vegan': false,
+};
 
-const categoryList = const [
+final categoryList = [
+  Category(id: 'c1', title: 'Myanmar', imageURL: Assets.images.myanmar.path),
+  Category(id: 'c2', title: 'Japan', imageURL: Assets.images.japan.path),
+  Category(id: 'c3', title: 'Chinese', imageURL: Assets.images.chinese.path),
+  Category(id: 'c4', title: 'Thailand', imageURL: Assets.images.thai.path),
+  Category(id: 'c5', title: 'Korea', imageURL: Assets.images.korea.path),
+  Category(id: 'c6', title: 'All', imageURL: Assets.images.all.path),
   Category(
-      id: 'c1',
-      title: 'Myanmar',
-      imageURL:
-          'https://thumbs.dreamstime.com/b/myanmar-country-text-red-love-heart-suitable-logo-icon-typography-design-138739407.jpg'),
-  Category(
-      id: 'c2',
-      title: 'Japan',
-      imageURL:
-          'https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/flag-of-japan-word-roy-pedersen.jpg'),
-  Category(
-      id: 'c3',
-      title: 'Chinese',
-      imageURL:
-          'https://thumbs.dreamstime.com/z/chinese-word-text-logo-icon-red-circle-design-white-background-suitable-card-typography-147082105.jpg?w=992'),
-  Category(
-      id: 'c4',
-      title: 'Thailand',
-      imageURL:
-          'https://www.shutterstock.com/image-vector/thailand-typography-calligraphy-style-brush-260nw-1364741195.jpg'),
-  Category(
-      id: 'c5',
-      title: 'Korea',
-      imageURL:
-          'https://sites.psu.edu/jee1117/wp-content/uploads/sites/13114/2014/06/korea1.png'),
-  Category(
-      id: 'c6',
-      title: 'All',
-      imageURL:
-          'https://logos.flamingtext.com/Word-Logos/all-design-girls-name.png'),
-  Category(
-      id: 'c7',
-      title: 'Breakfast',
-      imageURL:
-          'https://i0.wp.com/freefontdl.com/wp-content/uploads/2022/03/breakfast-font_622e91ff29b78.jpeg?fit=768%2C512&ssl=1'),
-  Category(
-      id: 'c8',
-      title: 'Lunch',
-      imageURL:
-          'https://media.istockphoto.com/id/1181750496/vector/lets-do-lunch-hand-drawn-vector-lettering-phrase-cartoon-style.jpg?s=612x612&w=0&k=20&c=2IgPhXb3ks3MOoCr-_lV_PDBspA-oc1KEwa7k571sDY='),
-  Category(
-      id: 'c9',
-      title: 'dinner',
-      imageURL:
-          'https://timbervalleyskp.com/wp-content/uploads/2018/01/Dinner-clipart.jpg'),
+      id: 'c7', title: 'Breakfast', imageURL: Assets.images.breakfast.path),
+  Category(id: 'c8', title: 'Lunch', imageURL: Assets.images.lunch.path),
+  Category(id: 'c9', title: 'dinner', imageURL: Assets.images.dinner.path),
 ];
 
-const MealsList = const [
+final MealsList = [
   Meal(
     id: 'm1',
     title: 'Mohinga',
-    imgURL:
-        'https://img.i-scmp.com/cdn-cgi/image/fit=contain,width=1098,format=auto/sites/default/files/styles/1200x800/public/d8/images/methode/2019/11/19/399d0bd8-05f4-11ea-a68f-66ebddf9f136_image_hires_124523.jpg?itok=_GncwaWt&v=1574138728',
+    imgURL: Assets.images.mohinga.path,
     categories: ['c1', 'c6', 'c7'],
     ingredients: [
       '2 white onions chopped',
@@ -103,8 +69,7 @@ const MealsList = const [
   Meal(
     id: 'm2',
     title: 'Burmese Khow Suey',
-    imgURL:
-        'https://sp-ao.shortpixel.ai/client/to_auto,q_lossless,ret_img,w_735/https://www.thetakeiteasychef.com/wp-content/uploads/2016/07/Burmese-Khow-Suey.jpg',
+    imgURL: Assets.images.burmeseKhowSuey.path,
     categories: ['c1', 'c6', 'c7'],
     ingredients: [
       '500 grams chicken cut to bite-size pieces',
@@ -148,8 +113,7 @@ const MealsList = const [
   Meal(
     id: 'm3',
     title: 'Falooda',
-    imgURL:
-        'https://images.food52.com/Igtx1TvmHSPWcXYZxsD7Pv2pd-E=/1200x1200/4576da15-f7b5-4896-b36e-42ae437b6a34--2018-0802_sponsored_milk_elixirs-falooda_3x2_julia-gartland_457.jpg',
+    imgURL: Assets.images.falooda.path,
     categories: ['c1', 'c6', 'c8'],
     ingredients: [
       'Milk 2 cups, full fat',
@@ -182,7 +146,7 @@ const MealsList = const [
   Meal(
     id: 'm4',
     title: 'Mont Lin Maya ',
-    imgURL: 'https://smilesaway.files.wordpress.com/2015/01/hw-myanmar2.jpg',
+    imgURL: Assets.images.montLinMaya.path,
     categories: ['c1', 'c6', 'c9'],
     ingredients: [
       'Mix rice flour with water',
@@ -210,8 +174,7 @@ const MealsList = const [
   Meal(
     id: 'm5',
     title: ' Kyar Zan Hin Khar',
-    imgURL:
-        'https://img.i-scmp.com/cdn-cgi/image/fit=contain,width=1098,format=auto/sites/default/files/styles/1200x800/public/d8/images/methode/2019/11/19/399d0bd8-05f4-11ea-a68f-66ebddf9f136_image_hires_124523.jpg?itok=_GncwaWt&v=1574138728',
+    imgURL: Assets.images.kyarZanHinKhar.path,
     categories: ['c1', 'c6', 'c7', 'c8'],
     ingredients: [
       'Meat as you like (chicken or pork).',
@@ -237,8 +200,7 @@ const MealsList = const [
   Meal(
     id: 'm6',
     title: 'Kyet thar kyaw',
-    imgURL:
-        'https://images.immediate.co.uk/production/volatile/sites/2/2020/08/166_friedchicken_preview-d468e1c.jpg?quality=90&webp=true&resize=975,649',
+    imgURL: Assets.images.kyettharkyaw.path,
     categories: ['c1', 'c6', 'c8', 'c9'],
     ingredients: [
       '600g skinless chicken thigh fillets cooked rice, to serve',
@@ -277,8 +239,7 @@ const MealsList = const [
   Meal(
     id: 'm7',
     title: 'Yangon htamin paung',
-    imgURL:
-        'https://i0.wp.com/themoonworld.com/wp-content/uploads/2020/10/20201010_142000-1.jpg?resize=800%2C600&ssl=1',
+    imgURL: Assets.images.yangonhtaminpaung.path,
     categories: ['c1', 'c6', 'c8', 'c9'],
     ingredients: [
       '200g chopped pork',
@@ -309,8 +270,7 @@ const MealsList = const [
   Meal(
     id: 'm8',
     title: 'Seafood Curry',
-    imgURL:
-        'http://linsfood.com/burmese-seafood-curry-recipe/burmese-seafood-curry-blog/',
+    imgURL: Assets.images.burmeseSeafoodCurryBlog.path,
     categories: ['c1', 'c6', 'c8', 'c9'],
     ingredients: [
       '500 g mixed seafood fish squid, prawns, etc',
@@ -355,8 +315,7 @@ const MealsList = const [
   Meal(
     id: 'm9',
     title: 'Chicken Curry',
-    imgURL:
-        'https://searchingforspice.com/wp-content/uploads/2010/12/Burmese-chicken-curry-900x900.jpg',
+    imgURL: Assets.images.burmeseChickenCurry.path,
     categories: ['c1', 'c6', 'c8', 'c9'],
     ingredients: [
       '580 g chicken diced',
@@ -391,8 +350,7 @@ const MealsList = const [
   Meal(
     id: 'm10',
     title: 'kaw Pyant',
-    imgURL:
-        'https://media-cdn.tripadvisor.com/media/photo-s/0a/ca/30/45/kaw-pyant.jpg',
+    imgURL: Assets.images.kawPyant.path,
     categories: ['c1', 'c6', 'c8', 'c7'],
     ingredients: [
       '15 spring roll rice paper wrappers (about 8 inches/20cm in diameter)',
@@ -436,8 +394,7 @@ const MealsList = const [
   Meal(
     id: 'm11',
     title: 'Sushi',
-    imgURL:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS57Q6Wm8jwJI5oli6y7Y262jProBTbcdPUjg&usqp=CAU',
+    imgURL: Assets.images.sushi.path,
     categories: ['c2', 'c6', 'c7', 'c8', 'c9'],
     ingredients: [
       '1 ⅓ cups water',
@@ -469,8 +426,7 @@ const MealsList = const [
   Meal(
     id: 'm12',
     title: 'Sashimi',
-    imgURL:
-        'https://www.japanesecooking101.com/wp-content/uploads/2019/08/DSC00528b-1140x640.jpg',
+    imgURL: Assets.images.sashimi.path,
     categories: ['c2', 'c6', 'c9', 'c8'],
     ingredients: [
       'Daikon radish about 4″ (10 cm)',
@@ -495,8 +451,7 @@ const MealsList = const [
   Meal(
     id: 'm13',
     title: 'Okonomiyaki',
-    imgURL:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8-n_urOpEu8BAq3AH7Er7OdD51tzcp-QDdw&usqp=CAU',
+    imgURL: Assets.images.okonomiyaki.path,
     categories: ['c2', 'c7', 'c6', 'c8'],
     ingredients: [
       '100g okonomiyaki flour',
@@ -531,8 +486,7 @@ const MealsList = const [
   Meal(
     id: 'm14',
     title: 'Takoyaki',
-    imgURL:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJDarEwOxu-kSFFnecHkZwtNlwH9zPjCVz8g&usqp=CAU',
+    imgURL: Assets.images.takoyaki.path,
     categories: ['c2', 'c9', 'c6'],
     ingredients: [
       '2 cups Dashi 480ml',
@@ -565,8 +519,7 @@ const MealsList = const [
   Meal(
     id: 'm15',
     title: 'Oden',
-    imgURL:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpNtJ1qLAi8r8E7RSuvE0ECM3jo6bEktsBCA&usqp=CAU',
+    imgURL: Assets.images.oden.path,
     categories: ['c2', 'c7', 'c8', 'c6', 'c9'],
     ingredients: [
       '3 cups homemade dashi',
@@ -596,8 +549,7 @@ const MealsList = const [
   Meal(
     id: 'm16',
     title: 'Natto',
-    imgURL:
-        ' https://cdn.britannica.com/16/236016-050-757D6F7E/natto-fermented-soybeans-rice-green-onions-raw-egg.jpg',
+    imgURL: Assets.images.natto.path,
     categories: ['c2', 'c7', 'c6', 'c8'],
     ingredients: [
       '2 cups soybeans',
@@ -624,8 +576,7 @@ const MealsList = const [
   Meal(
     id: 'm17',
     title: 'Sake',
-    imgURL:
-        ' https://keyassets.timeincuk.net/inspirewp/live/wp-content/uploads/sites/34/2019/11/Sake-Unsplash.gif',
+    imgURL: Assets.images.sake.path,
     categories: ['c2', 'c7', 'c8', 'c6'],
     ingredients: [
       '2.5 pounds rice (husked or raw)',
@@ -662,8 +613,7 @@ const MealsList = const [
   Meal(
     id: 'm18',
     title: 'Dango',
-    imgURL:
-        'https://www.chopstickchronicles.com/wp-content/uploads/2017/11/Hanami-Dango-22.jpg',
+    imgURL: Assets.images.dango.path,
     categories: ['c2', 'c8', 'c6'],
     ingredients: [
       '8 oz Mochiko',
@@ -690,8 +640,7 @@ const MealsList = const [
   Meal(
     id: 'm19',
     title: 'japanese Curry',
-    imgURL:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSA9xOC6ilstOqo7YRLtpvFXGYjRVbVCxcenglEjCHzdHAF4R3O5F8iqxy2TYO01NZtOLc&usqp=CAU',
+    imgURL: Assets.images.japaneseCurry.path,
     categories: ['c2', 'c7', 'c8', 'c9', 'c6'],
     ingredients: [
       'Beef (or Chicken, Lamb, Shrimp), chopped	450 g / 1 lb',
@@ -717,8 +666,7 @@ const MealsList = const [
   Meal(
     id: 'm20',
     title: 'Dorayaki',
-    imgURL:
-        'https://www.honestfoodtalks.com/wp-content/uploads/2022/02/2-Dorayaki-with-red-bean-filling.jpg',
+    imgURL: Assets.images.dorayaki.path,
     categories: ['c2', 'c6', 'c7', 'c8'],
     ingredients: [
       '2 medium egg',
@@ -747,8 +695,7 @@ const MealsList = const [
   Meal(
     id: 'm21',
     title: 'STEAMED FISH',
-    imgURL:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRs65FtTRrY0dFXgml1E-6hE5ok9m7O-CKhuQ&usqp=CAU',
+    imgURL: Assets.images.steamedfish.path,
     categories: ['c3', 'c7', 'c8', 'c9', 'c6'],
     ingredients: [
       '2 scallions',
@@ -781,8 +728,7 @@ const MealsList = const [
   Meal(
     id: 'm22',
     title: 'Fried Milk',
-    imgURL:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0O6lzA0oD00RxcVo_aayqrULh5uekqLOeFA&usqp=CAU',
+    imgURL: Assets.images.friedMilk.path,
     categories: ['c3', 'c7', 'c8'],
     ingredients: [
       '1 cup coconut milk',
@@ -810,8 +756,7 @@ const MealsList = const [
   Meal(
     id: 'm23',
     title: 'Mapo Tofu Recipe',
-    imgURL:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrbkrJpzaHVwCvtA-EbW-X1_r74QK2qYzTfA&usqp=CAU',
+    imgURL: Assets.images.mapoTofuRecipe.path,
     categories: ['c3', 'c7', 'c8', 'c9'],
     ingredients: [
       '450 g soft tofu',
@@ -852,8 +797,7 @@ const MealsList = const [
   Meal(
     id: 'm24',
     title: 'Stir Fry',
-    imgURL:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQx5FB5IWb_TvS6tZfOtUPKs4PgcxnlV3cytg&usqp=CAU',
+    imgURL: Assets.images.stirFry.path,
     categories: ['c3', 'c7', 'c8'],
     ingredients: [
       '200 g pork butt or tenderloin , thinly sliced',
@@ -889,8 +833,7 @@ const MealsList = const [
   Meal(
     id: 'm25',
     title: 'Scallion Pancakes',
-    imgURL:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKFZ_2_NNEkzeQIbcaTBO9Yt8sB-iIyd0VRA&usqp=CAU',
+    imgURL: Assets.images.scallionPancakes.path,
     categories: ['c3', 'c6', 'c7', 'c8'],
     ingredients: [
       '2 cup unshifted all purpose flour , around 300g',
@@ -928,8 +871,7 @@ const MealsList = const [
   Meal(
     id: 'm26',
     title: 'HONG SHAO ROU',
-    imgURL:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMXB3j80jCqo8HoK5prRmdoiCzdPN8izbCAw&usqp=CAU',
+    imgURL: Assets.images.hongshaorou.path,
     categories: ['c3', 'c7', 'c8', 'c9'],
     ingredients: [
       '500 g pork belly , cut into cubes around 2 inches',
@@ -961,8 +903,7 @@ const MealsList = const [
   Meal(
     id: 'm27',
     title: 'Crispy Eggplants',
-    imgURL:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVVSTxCKs-OsgS9acnx7yLMvQsHUbjkX3XgPfMCHSiD2YHT9ueFkToEhiregPeMuZRpYg&usqp=CAU',
+    imgURL: Assets.images.crispyEggplants.path,
     categories: ['c3', 'c6', 'c7', 'c8', 'c9'],
     ingredients: [
       '1 eggplant , cut into wedges by rotating',
@@ -996,8 +937,7 @@ const MealsList = const [
   Meal(
     id: 'm28',
     title: 'Pot Stickers',
-    imgURL:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7EkQoH1gUE393hii0UZPnDsXFwU02tQCcCg&usqp=CAU',
+    imgURL: Assets.images.potStickers.path,
     categories: ['c3', 'c6', 'c7', 'c8'],
     ingredients: [
       '250g minced pork (with some fat)',
@@ -1034,8 +974,7 @@ const MealsList = const [
   Meal(
     id: 'm29',
     title: 'Chinese Salted Duck',
-    imgURL:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3UhK_vZdKT5g0dSaG1Gdx-aAlQv8PSYIXIw&usqp=CAU',
+    imgURL: Assets.images.chineseSaltedDuck.path,
     categories: ['c3', 'c7', 'c8', 'c9'],
     ingredients: [
       '1 duck , around 3000g',
@@ -1063,8 +1002,7 @@ const MealsList = const [
   Meal(
     id: 'm30',
     title: 'Chinese Pork Bun',
-    imgURL:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXR1qAO-Up7fqUANITXTWWS84xQbVleUK3EQ&usqp=CAU',
+    imgURL: Assets.images.chinesePorkBun.path,
     categories: ['c3', 'c6', 'c7', 'c8'],
     ingredients: [
       '2 cup all-purpose flour , ½ cup more for dusting',
@@ -1106,8 +1044,7 @@ const MealsList = const [
   Meal(
     id: 'm31',
     title: 'Tom Yum Goong',
-    imgURL:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4vgY0gdOlBIyYvm61yzRHGvnB6iwZH_4bAQ&usqp=CAU',
+    imgURL: Assets.images.tomYumGoong.path,
     categories: ['c4', 'c7', 'c8', 'c9'],
     ingredients: [
       '3 chili peppers',
@@ -1136,8 +1073,7 @@ const MealsList = const [
   Meal(
     id: 'm32',
     title: 'Vegan Mango Salad',
-    imgURL:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRscV6twlhBDzTbjTleeWC9o5Zw2ndM7mA7A&usqp=CAU',
+    imgURL: Assets.images.veganMangoSalad.path,
     categories: ['c4', 'c7', 'c8'],
     ingredients: [
       '1 green mango',
@@ -1163,8 +1099,7 @@ const MealsList = const [
   Meal(
     id: 'm33',
     title: 'Pad thai',
-    imgURL:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQT3rlAg8NB4Q92ileIsGuARbP8Gv76BlQnOw&usqp=CAU',
+    imgURL: Assets.images.padthai.path,
     categories: ['c4', 'c6', 'c7', 'c8'],
     ingredients: [
       '1/2 package Thai rice noodles',
@@ -1204,8 +1139,7 @@ const MealsList = const [
   Meal(
     id: 'm34',
     title: 'som tum',
-    imgURL:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbHbnqdpWQ8v_Wyd9SolSo7VDBnqK6FA4rjw&usqp=CAU',
+    imgURL: Assets.images.somtum.path,
     categories: ['c4', 'c7', 'c8'],
     ingredients: [
       '5 Cherry Tomatoes',
@@ -1240,7 +1174,7 @@ const MealsList = const [
   Meal(
     id: 'm35',
     title: ' Pad Kee Mao',
-    imgURL: 'https://static0.thaitable.com/images/recipe/5pad-kee-mao.jpg',
+    imgURL: Assets.images.padKeeMao.path,
     categories: [
       'c4',
       'c6',
@@ -1274,8 +1208,7 @@ const MealsList = const [
   Meal(
     id: 'm36',
     title: ' Crab Fried Rice ',
-    imgURL:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHoqBWKRwZCvzBx8v4wORAMHtCdp85s-mPGw&usqp=CAU',
+    imgURL: Assets.images.crabFriedRice.path,
     categories: ['c4', 'c6', 'c9', 'c8'],
     ingredients: [
       '6 cups cooked rice',
@@ -1311,8 +1244,7 @@ const MealsList = const [
   Meal(
     id: 'm37',
     title: 'Chicken Basil',
-    imgURL:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ40G9EGCu8IWI_YhhtLMRj0g_dcnHDZ5nnqfi7HWSyp6XaFslsxwAPJ7f8nE0QvLtc-hY&usqp=CAU',
+    imgURL: Assets.images.chickenBasil.path,
     categories: ['c4', 'c6', 'c9', 'c8'],
     ingredients: [
       '3 tablespoons fish sauce',
@@ -1343,8 +1275,7 @@ const MealsList = const [
   Meal(
     id: 'm38',
     title: 'Tom Kha Gai',
-    imgURL:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8-xsUHRKob_z8cXbenn5xz_tj6xBKk2wRMX508D-qGlbUPlA&s',
+    imgURL: Assets.images.tomKhaGai.path,
     categories: ['c4', 'c7', 'c8', 'c9'],
     ingredients: [
       '1/4 cup chicken',
@@ -1370,8 +1301,7 @@ const MealsList = const [
   Meal(
     id: 'm39',
     title: 'Shredded Coconut',
-    imgURL:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpLC-tiL5FdoDNN8ItmB4hxxr5X_GJ8jyeKQ&usqp=CAU',
+    imgURL: Assets.images.shreddedCoconut.path,
     categories: ['c4', 'c7'],
     ingredients: [
       '1 ear corn',
@@ -1394,8 +1324,7 @@ const MealsList = const [
   Meal(
     id: 'm40',
     title: 'Laab',
-    imgURL:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8vG0Lokt9Nk4JtYBkt_UG5O4IDm7rXaFpxQ&usqp=CAU',
+    imgURL: Assets.images.laab.path,
     categories: ['c4', 'c6', 'c7', 'c8'],
     ingredients: [
       '5 sprigs sliced cilantro',
@@ -1433,8 +1362,7 @@ const MealsList = const [
   Meal(
     id: 'm51',
     title: 'Kimchi stew ',
-    imgURL:
-        'https://www.maangchi.com/wp-content/uploads/2014/09/kimchi.jpg',
+    imgURL: Assets.images.kimchistew.path,
     categories: ['c5', 'c6', 'c7', 'c8'],
     ingredients: [
       '1 pound kimchi, cut into bite size pieces',
@@ -1477,8 +1405,7 @@ const MealsList = const [
   Meal(
     id: 'm52',
     title: 'Cold soba with dipping sauce',
-    imgURL:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvmfOn5BsSbMtK3mJNu8UHpzZjuoQFcZ20ig&usqp=CAU',
+    imgURL: Assets.images.coldsobawithdippingsauce.path,
     categories: ['c5', 'c6', 'c7', 'c8'],
     ingredients: [
       '3 bundles (about 390 grams) of soba (buckwheat noodles)',
@@ -1511,8 +1438,7 @@ const MealsList = const [
   Meal(
     id: 'm53',
     title: 'Kimchi pancake',
-    imgURL:
-        'https://www.google.com/imgres?imgurl=https%3A%2F%2Fimages.slurrp.com%2Fprod%2Frecipe_images%2Fno-recipes%2Fkimchijeon-kimchi-pancakes-recipe-1649689332_XBXWF5XPJGZ7UJZJGLPJ.webp%3Fimpolicy%3Dslurrp-20210601%26width%3D1200%26height%3D675&tbnid=sebstvlhGGG9UM&vet=10CCYQMyhzahcKEwjwpcCkmNqBAxUAAAAAHQAAAAAQAw..i&imgrefurl=https%3A%2F%2Fwww.slurrp.com%2Frecipes%2Fkimchijeon-kimchi-pancakes-recipe-1649689332&docid=Um1S17Xwaz_fdM&w=1013&h=675&q=Kimchi%20pancake&client=firefox-b-d&ved=0CCYQMyhzahcKEwjwpcCkmNqBAxUAAAAAHQAAAAAQAw',
+    imgURL: Assets.images.kimchipancake.path,
     categories: ['c5', 'c7', 'c8'],
     ingredients: [
       '½ pound well-fermented napa cabbage kimchi, chopped into small pieces, plus 2 tablespoons of the brine',
@@ -1542,8 +1468,7 @@ const MealsList = const [
   Meal(
     id: 'm54',
     title: 'Tteokbokki',
-    imgURL:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2gG78apr4R7SsDi1_Ohq8s9SSPfXgblJcHA&usqp=CAU',
+    imgURL: Assets.images.tteokbokki.path,
     categories: ['c5', 'c7', 'c8'],
     ingredients: [
       '1 pound of cylinder shaped rice cake (tteok), bought or homemade. (Use a little more if you’re not adding hard boiled eggs and fish cakes)',
@@ -1573,8 +1498,7 @@ const MealsList = const [
   Meal(
     id: 'm55',
     title: 'Wanja-jeon ',
-    imgURL:
-        'https://www.google.com/imgres?imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2FelcH2ebWXLQ%2Fmqdefault.jpg&tbnid=lo_cVZhtdlyl6M&vet=12ahUKEwiyybyRn9qBAxXemmMGHbO_AD8QMygfegUIARCPAQ..i&imgrefurl=https%3A%2F%2Fwww.maangchi.com%2Frecipe%2Fwanja-jeon&docid=67TtvkT7be4uHM&w=320&h=180&q=Wanja-jeon%20&client=firefox-b-d&ved=2ahUKEwiyybyRn9qBAxXemmMGHbO_AD8QMygfegUIARCPAQ',
+    imgURL: Assets.images.wanjaJeon.path,
     categories: ['c5', 'c7', 'c8'],
     ingredients: [
       '½ pound ground beef (or pork or mixture of pork and beef)',
@@ -1611,8 +1535,7 @@ const MealsList = const [
   Meal(
     id: 'm56',
     title: 'Doenjang-jjigae ',
-    imgURL:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLth_zpQanwdJbL-uW8wmN8pAd_RHzyfBp99fgGz70GlYgAAq86_iv-nhtDHlHiGScZsA&usqp=CAU',
+    imgURL: Assets.images.doenjangJjigae.path,
     categories: ['c5', 'c6', 'c7', 'c8'],
     ingredients: [
       '1 medium potato, peeled and cut into ½-inch cubes (about 1 cup)',
@@ -1644,8 +1567,7 @@ const MealsList = const [
   Meal(
     id: 'm57',
     title: 'Korean crab stew ',
-    imgURL:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYK-UykA14mjtTTWwgWkc9fSFZvJnaWb0xHg&usqp=CAU',
+    imgURL: Assets.images.koreancrabstew.path,
     categories: ['c5', 'c6', 'c7', 'c8'],
     ingredients: [
       '1 pound of cleaned Korean flower crabs (frozen or fresh), cut into chunks (or substitute with your local crab)',
@@ -1682,8 +1604,7 @@ const MealsList = const [
   Meal(
     id: 'm58',
     title: 'Roasted seaweed sheets ',
-    imgURL:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI0DI05e6zM7M0BwZxzFqBiNMBVApTCOyTf_fS_3h2iqhROoCdNUxKK5b4SEunKwcoysU&usqp=CAU',
+    imgURL: Assets.images.roastedseaweedsheets.path,
     categories: ['c5', 'c6', 'c7', 'c8'],
     ingredients: [
       '20 sheets of gim (seaweed sheets)',
@@ -1711,8 +1632,7 @@ const MealsList = const [
   Meal(
     id: 'm59',
     title: 'Kimchi fried rice ',
-    imgURL:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgSSr4AmIlgntht6MgtTmSVPz0d4Rhsm6Ivg&usqp=CAU',
+    imgURL: Assets.images.kimchifriedrice.path,
     categories: ['c5', 'c6', 'c7', 'c8'],
     ingredients: [
       '3 bowls steamed rice (3 cups)',
@@ -1742,8 +1662,7 @@ const MealsList = const [
   Meal(
     id: 'm60',
     title: 'Fish-shaped bread with sweet red bean filling',
-    imgURL:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDjdBAZyrMjb88i2rmdB4-M4vY9y7UXeoTAA&usqp=CAU',
+    imgURL: Assets.images.fishShape.path,
     categories: ['c5', 'c6', 'c7', 'c8'],
     ingredients: [
       '1 cup all purpose flour',

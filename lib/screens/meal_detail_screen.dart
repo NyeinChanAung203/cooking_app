@@ -13,7 +13,7 @@ class MealDetailScreen extends StatelessWidget {
       margin: const EdgeInsets.symmetric(vertical: 10.0),
       child: Text(
         title,
-        style: Theme.of(context).textTheme.bodyLarge,
+        style: Theme.of(context).textTheme.titleLarge,
       ),
     );
   }
@@ -46,50 +46,69 @@ class MealDetailScreen extends StatelessWidget {
           IconButton(
             onPressed: () => toggleFavorite(mealId),
             icon: isFavoriteMeal(mealId)
-                ? const Icon(Icons.favorite)
-                : const Icon(Icons.favorite_border),
+                ? const Icon(
+                    Icons.favorite,
+                    color: Colors.pink,
+                  )
+                : const Icon(
+                    Icons.favorite_border,
+                    color: Colors.pinkAccent,
+                  ),
           ),
         ],
       ),
       body: SingleChildScrollView(
-        child: Column(
-          children: [
-            SizedBox(
-              height: 300,
-              width: double.infinity,
-              child: Image.network(
-                selectedMeal.imgURL,
-                fit: BoxFit.cover,
-              ),
-            ),
-            buildTitleContainer(context, 'Ingredients'),
-            buildListContainer(
-              context,
-              ListView.builder(
-                padding: const EdgeInsets.all(
-                  5.0,
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SizedBox(
+                height: 300,
+                width: double.infinity,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(4),
+                  child: Hero(
+                    tag: selectedMeal.imgURL,
+                    child: Image.asset(
+                      selectedMeal.imgURL,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
                 ),
-                itemBuilder: (context, index) => Text(
-                  '_${selectedMeal.ingredients[index]}',
-                ),
-                itemCount: selectedMeal.ingredients.length,
               ),
-            ),
-            buildTitleContainer(context, 'Steps'),
-            buildListContainer(
-              context,
-              ListView.builder(
-                itemBuilder: (context, index) => ListTile(
+              const SizedBox(
+                height: 16,
+              ),
+              buildTitleContainer(context, 'Ingredients'),
+              const SizedBox(
+                height: 8,
+              ),
+              ...selectedMeal.ingredients.map((e) => Text(
+                    '- ${e}',
+                    textAlign: TextAlign.left,
+                    style: Theme.of(context).textTheme.bodyMedium,
+                  )),
+              const SizedBox(height: 16),
+              buildTitleContainer(context, 'Steps'),
+              ...List.generate(
+                selectedMeal.steps.length,
+                (index) => ListTile(
                   leading: CircleAvatar(
                     backgroundColor: Theme.of(context).colorScheme.primary,
-                    child: Text('${index + 1}'),
+                    child: Text(
+                      '${index + 1}',
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ),
-                  title: Text(selectedMeal.steps[index]),
+                  title: Text(
+                    selectedMeal.steps[index],
+                    style: Theme.of(context).textTheme.bodyMedium,
+                  ),
                 ),
-                itemCount: selectedMeal.steps.length,
-              ),
-            )
-          ],
+              )
+            ],
+          ),
         ),
       ),
     );

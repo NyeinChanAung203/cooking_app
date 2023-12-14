@@ -39,6 +39,8 @@ dependencies:
   freezed: ^2.4.1
 
 dev_dependencies:
+  build_runner:
+  flutter_gen_runner:
  
   flutter_test:
     sdk: flutter
@@ -70,11 +72,8 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/fonts/images/1c.jpg
-    - assets/fonts/images/2c.jpg
-    - assets/fonts/images/3c.jpg
-    - assets/fonts/images/4c.jpg
-    - assets/fonts/images/5c.jpg
+    - assets/fonts/
+    - assets/images/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
@@ -87,6 +86,7 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
+
   fonts:
     - family: Raleway
       fonts:
