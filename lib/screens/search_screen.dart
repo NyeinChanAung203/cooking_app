@@ -43,7 +43,10 @@ class _SearchState extends State<Search> {
                     decoration: InputDecoration(
                         isDense: true,
                         border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(50),
+                          borderSide: BorderSide(
+                            color: Colors.pinkAccent,
+                          ),
+                          borderRadius: BorderRadius.circular(8),
                         ),
                         hintText: 'Search your recipe',
                         prefixIcon: Icon(Icons.search),
@@ -105,14 +108,25 @@ class _SearchState extends State<Search> {
                           decoration: BoxDecoration(
                             color: Colors.grey,
                             borderRadius: BorderRadius.circular(8),
-                            image: DecorationImage(
-                                image: AssetImage(meal.imgURL),
-                                fit: BoxFit.cover),
+                            // image: DecorationImage(
+                            //     image: AssetImage(meal.imgURL),
+                            //     fit: BoxFit.cover),
                           ),
                           alignment: Alignment.bottomCenter,
                           child: Stack(
                             alignment: Alignment.bottomCenter,
                             children: [
+                              Hero(
+                                  tag: meal.imgURL,
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(8),
+                                    child: Image.asset(
+                                      meal.imgURL,
+                                      height: double.infinity,
+                                      width: double.infinity,
+                                      fit: BoxFit.cover,
+                                    ),
+                                  )),
                               Container(
                                 decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(8),
@@ -132,6 +146,8 @@ class _SearchState extends State<Search> {
                                 child: Text(
                                   meal.title,
                                   textAlign: TextAlign.center,
+                                  maxLines: 2,
+                                  overflow: TextOverflow.ellipsis,
                                   style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 16,

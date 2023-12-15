@@ -61,29 +61,13 @@ class $AssetsImagesGen {
   AssetGenImage get burmeseChickenCurry =>
       const AssetGenImage('assets/images/Burmese-chicken-curry.jpg');
 
-  /// File path: assets/images/ChickenBasil.jpg
-  AssetGenImage get chickenBasil =>
-      const AssetGenImage('assets/images/ChickenBasil.jpg');
-
-  /// File path: assets/images/ChinesePorkBun.jpg
-  AssetGenImage get chinesePorkBun =>
-      const AssetGenImage('assets/images/ChinesePorkBun.jpg');
-
-  /// File path: assets/images/ChineseSaltedDuck.jpg
-  AssetGenImage get chineseSaltedDuck =>
-      const AssetGenImage('assets/images/ChineseSaltedDuck.jpg');
-
   /// File path: assets/images/Coldsobawithdippingsauce.jpg
   AssetGenImage get coldsobawithdippingsauce =>
       const AssetGenImage('assets/images/Coldsobawithdippingsauce.jpg');
 
-  /// File path: assets/images/CrabFriedRice.jpg
-  AssetGenImage get crabFriedRice =>
-      const AssetGenImage('assets/images/CrabFriedRice.jpg');
-
-  /// File path: assets/images/CrispyEggplants.jpg
+  /// File path: assets/images/CrispyEggplants.webp
   AssetGenImage get crispyEggplants =>
-      const AssetGenImage('assets/images/CrispyEggplants.jpg');
+      const AssetGenImage('assets/images/CrispyEggplants.webp');
 
   /// File path: assets/images/Dango.jpg
   AssetGenImage get dango => const AssetGenImage('assets/images/Dango.jpg');
@@ -99,25 +83,9 @@ class $AssetsImagesGen {
   /// File path: assets/images/Falooda.jpg
   AssetGenImage get falooda => const AssetGenImage('assets/images/Falooda.jpg');
 
-  /// File path: assets/images/FishShape.jpg
-  AssetGenImage get fishShape =>
-      const AssetGenImage('assets/images/FishShape.jpg');
-
-  /// File path: assets/images/FriedMilk.jpg
-  AssetGenImage get friedMilk =>
-      const AssetGenImage('assets/images/FriedMilk.jpg');
-
-  /// File path: assets/images/HONGSHAOROU.jpg
+  /// File path: assets/images/HONGSHAOROU.webp
   AssetGenImage get hongshaorou =>
-      const AssetGenImage('assets/images/HONGSHAOROU.jpg');
-
-  /// File path: assets/images/Kimchifriedrice.jpg
-  AssetGenImage get kimchifriedrice =>
-      const AssetGenImage('assets/images/Kimchifriedrice.jpg');
-
-  /// File path: assets/images/Kimchipancake.jpg
-  AssetGenImage get kimchipancake =>
-      const AssetGenImage('assets/images/Kimchipancake.jpg');
+      const AssetGenImage('assets/images/HONGSHAOROU.webp');
 
   /// File path: assets/images/Kimchistew.jpg
   AssetGenImage get kimchistew =>
@@ -149,9 +117,6 @@ class $AssetsImagesGen {
   /// File path: assets/images/Natto.webp
   AssetGenImage get natto => const AssetGenImage('assets/images/Natto.webp');
 
-  /// File path: assets/images/Oden.jpg
-  AssetGenImage get oden => const AssetGenImage('assets/images/Oden.jpg');
-
   /// File path: assets/images/Okonomiyaki.jpg
   AssetGenImage get okonomiyaki =>
       const AssetGenImage('assets/images/Okonomiyaki.jpg');
@@ -163,17 +128,17 @@ class $AssetsImagesGen {
   /// File path: assets/images/Padthai.jpg
   AssetGenImage get padthai => const AssetGenImage('assets/images/Padthai.jpg');
 
-  /// File path: assets/images/PotStickers.jpg
+  /// File path: assets/images/PotStickers.webp
   AssetGenImage get potStickers =>
-      const AssetGenImage('assets/images/PotStickers.jpg');
+      const AssetGenImage('assets/images/PotStickers.webp');
 
   /// File path: assets/images/Roastedseaweedsheets.jpg
   AssetGenImage get roastedseaweedsheets =>
       const AssetGenImage('assets/images/Roastedseaweedsheets.jpg');
 
-  /// File path: assets/images/STEAMEDFISH.jpg
+  /// File path: assets/images/STEAMEDFISH.png
   AssetGenImage get steamedfish =>
-      const AssetGenImage('assets/images/STEAMEDFISH.jpg');
+      const AssetGenImage('assets/images/STEAMEDFISH.png');
 
   /// File path: assets/images/Sashimi.jpg
   AssetGenImage get sashimi => const AssetGenImage('assets/images/Sashimi.jpg');
@@ -189,16 +154,13 @@ class $AssetsImagesGen {
   /// File path: assets/images/StirFry.jpg
   AssetGenImage get stirFry => const AssetGenImage('assets/images/StirFry.jpg');
 
-  /// File path: assets/images/Sushi.jpg
-  AssetGenImage get sushi => const AssetGenImage('assets/images/Sushi.jpg');
-
   /// File path: assets/images/Takoyaki.jpg
   AssetGenImage get takoyaki =>
       const AssetGenImage('assets/images/Takoyaki.jpg');
 
-  /// File path: assets/images/TomKhaGai.jpg
+  /// File path: assets/images/TomKhaGai.webp
   AssetGenImage get tomKhaGai =>
-      const AssetGenImage('assets/images/TomKhaGai.jpg');
+      const AssetGenImage('assets/images/TomKhaGai.webp');
 
   /// File path: assets/images/TomYumGoong.jpg
   AssetGenImage get tomYumGoong =>
@@ -208,13 +170,13 @@ class $AssetsImagesGen {
   AssetGenImage get tteokbokki =>
       const AssetGenImage('assets/images/Tteokbokki.jpg');
 
-  /// File path: assets/images/VeganMangoSalad.jpg
+  /// File path: assets/images/VeganMangoSalad.jpeg
   AssetGenImage get veganMangoSalad =>
-      const AssetGenImage('assets/images/VeganMangoSalad.jpg');
+      const AssetGenImage('assets/images/VeganMangoSalad.jpeg');
 
-  /// File path: assets/images/Wanja-jeon.jpg
+  /// File path: assets/images/Wanja-jeon.JPG
   AssetGenImage get wanjaJeon =>
-      const AssetGenImage('assets/images/Wanja-jeon.jpg');
+      const AssetGenImage('assets/images/Wanja-jeon.JPG');
 
   /// File path: assets/images/Yangonhtaminpaung.webp
   AssetGenImage get yangonhtaminpaung =>
@@ -230,11 +192,35 @@ class $AssetsImagesGen {
   /// File path: assets/images/chef.png
   AssetGenImage get chef => const AssetGenImage('assets/images/chef.png');
 
+  /// File path: assets/images/chickenBasil.jpg
+  AssetGenImage get chickenBasil =>
+      const AssetGenImage('assets/images/chickenBasil.jpg');
+
   /// File path: assets/images/chinese.jpg
   AssetGenImage get chinese => const AssetGenImage('assets/images/chinese.jpg');
 
+  /// File path: assets/images/chinesePorkBuns.jpg
+  AssetGenImage get chinesePorkBuns =>
+      const AssetGenImage('assets/images/chinesePorkBuns.jpg');
+
+  /// File path: assets/images/chineseSaltedDuck.jpg
+  AssetGenImage get chineseSaltedDuck =>
+      const AssetGenImage('assets/images/chineseSaltedDuck.jpg');
+
+  /// File path: assets/images/crab-fried-rice.jpg
+  AssetGenImage get crabFriedRice =>
+      const AssetGenImage('assets/images/crab-fried-rice.jpg');
+
   /// File path: assets/images/dinner.jpg
   AssetGenImage get dinner => const AssetGenImage('assets/images/dinner.jpg');
+
+  /// File path: assets/images/fishshape.jpg
+  AssetGenImage get fishshape =>
+      const AssetGenImage('assets/images/fishshape.jpg');
+
+  /// File path: assets/images/fried-milkjpg.jpg
+  AssetGenImage get friedMilkjpg =>
+      const AssetGenImage('assets/images/fried-milkjpg.jpg');
 
   /// File path: assets/images/japan.jpg
   AssetGenImage get japan => const AssetGenImage('assets/images/japan.jpg');
@@ -246,6 +232,14 @@ class $AssetsImagesGen {
   /// File path: assets/images/kawPyant.jpg
   AssetGenImage get kawPyant =>
       const AssetGenImage('assets/images/kawPyant.jpg');
+
+  /// File path: assets/images/kimchi-cheese-pancake.jpg
+  AssetGenImage get kimchiCheesePancake =>
+      const AssetGenImage('assets/images/kimchi-cheese-pancake.jpg');
+
+  /// File path: assets/images/kimchiFriedRice.jpg
+  AssetGenImage get kimchiFriedRice =>
+      const AssetGenImage('assets/images/kimchiFriedRice.jpg');
 
   /// File path: assets/images/korea.jpg
   AssetGenImage get korea => const AssetGenImage('assets/images/korea.jpg');
@@ -260,11 +254,17 @@ class $AssetsImagesGen {
   /// File path: assets/images/myanmar.jpg
   AssetGenImage get myanmar => const AssetGenImage('assets/images/myanmar.jpg');
 
+  /// File path: assets/images/oden.webp
+  AssetGenImage get oden => const AssetGenImage('assets/images/oden.webp');
+
   /// File path: assets/images/sake.jpg
   AssetGenImage get sake => const AssetGenImage('assets/images/sake.jpg');
 
-  /// File path: assets/images/somtum.jpg
-  AssetGenImage get somtum => const AssetGenImage('assets/images/somtum.jpg');
+  /// File path: assets/images/shushi.jpg
+  AssetGenImage get shushi => const AssetGenImage('assets/images/shushi.jpg');
+
+  /// File path: assets/images/somtum.webp
+  AssetGenImage get somtum => const AssetGenImage('assets/images/somtum.webp');
 
   /// File path: assets/images/thai.jpg
   AssetGenImage get thai => const AssetGenImage('assets/images/thai.jpg');
@@ -274,21 +274,13 @@ class $AssetsImagesGen {
         burmeseKhowSuey,
         burmeseSeafoodCurryBlog,
         burmeseChickenCurry,
-        chickenBasil,
-        chinesePorkBun,
-        chineseSaltedDuck,
         coldsobawithdippingsauce,
-        crabFriedRice,
         crispyEggplants,
         dango,
         doenjangJjigae,
         dorayaki,
         falooda,
-        fishShape,
-        friedMilk,
         hongshaorou,
-        kimchifriedrice,
-        kimchipancake,
         kimchistew,
         koreancrabstew,
         kyarZanHinKhar,
@@ -297,7 +289,6 @@ class $AssetsImagesGen {
         mapoTofuRecipe,
         montLinMaya,
         natto,
-        oden,
         okonomiyaki,
         padKeeMao,
         padthai,
@@ -308,7 +299,6 @@ class $AssetsImagesGen {
         scallionPancakes,
         shreddedCoconut,
         stirFry,
-        sushi,
         takoyaki,
         tomKhaGai,
         tomYumGoong,
@@ -319,16 +309,26 @@ class $AssetsImagesGen {
         all,
         breakfast,
         chef,
+        chickenBasil,
         chinese,
+        chinesePorkBuns,
+        chineseSaltedDuck,
+        crabFriedRice,
         dinner,
+        fishshape,
+        friedMilkjpg,
         japan,
         japaneseCurry,
         kawPyant,
+        kimchiCheesePancake,
+        kimchiFriedRice,
         korea,
         lunch,
         mohinga,
         myanmar,
+        oden,
         sake,
+        shushi,
         somtum,
         thai
       ];

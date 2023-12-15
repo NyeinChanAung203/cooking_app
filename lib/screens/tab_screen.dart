@@ -1,4 +1,3 @@
-
 import 'package:cooking_app/screens/search_screen.dart';
 import 'package:flutter/material.dart';
 import './categories_screen.dart';
@@ -18,8 +17,6 @@ class TabScreen extends StatefulWidget {
 }
 
 class _TabScreenState extends State<TabScreen> {
- 
-
   int selectedItemIndex = 0;
 
   void _selectItem(int index) {
@@ -30,11 +27,10 @@ class _TabScreenState extends State<TabScreen> {
 
   @override
   Widget build(BuildContext context) {
-    
-     List<Map<String, Object>> _pages = [
+    List<Map<String, Object>> _pages = [
       {
         'page': Home(),
-        'title': 'Mr.Cooking',
+        'title': 'Mrs.Cooking',
       },
       {
         'page': CategoriesScreen(),

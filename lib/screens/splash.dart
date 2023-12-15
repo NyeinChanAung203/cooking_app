@@ -13,7 +13,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Future.delayed(
-      const Duration(seconds: 2),
+      const Duration(milliseconds: 2500),
       () => Navigator.of(context).pushReplacementNamed('/'),
     );
   }
@@ -27,7 +27,7 @@ class _SplashScreenState extends State<SplashScreen> {
         children: [
           Image.asset(Assets.images.chef.path),
           Text(
-            'Welcome to Mr.Cooking',
+            'Welcome to Mrs.Cooking',
             style: Theme.of(context).textTheme.titleLarge,
           )
         ],

@@ -42,7 +42,7 @@ class MealItem extends StatelessWidget {
                 blurRadius: 15,
               ),
             ],
-            borderRadius: BorderRadius.circular(20),
+            borderRadius: BorderRadius.circular(10),
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -53,9 +53,10 @@ class MealItem extends StatelessWidget {
                 child: Hero(
                   tag: imgURL,
                   child: ClipRRect(
-                      borderRadius: BorderRadius.circular(12),
+                      borderRadius: BorderRadius.circular(8),
                       child: Image.asset(
                         imgURL,
+                        width: double.infinity,
                         fit: BoxFit.cover,
                       )),
                 ),

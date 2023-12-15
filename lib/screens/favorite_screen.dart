@@ -9,22 +9,24 @@ class FavoriteScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GridView.builder(
-      itemBuilder: (context, index) {
-        return MealItem(
-          id: favoriteMeals[index].id,
-          title: favoriteMeals[index].title,
-          imgURL: favoriteMeals[index].imgURL,
-          duration: favoriteMeals[index].duration,
-        );
-      },
-      itemCount: favoriteMeals.length,
-      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 2,
-        mainAxisExtent: 270,
-        mainAxisSpacing: 15,
-        crossAxisSpacing: 15,
-      ),
-    );
+    return favoriteMeals.isEmpty
+        ? Center(
+            child: Text('There is no favorite meals!'),
+          )
+        : GridView.builder(
+            itemBuilder: (context, index) {
+              return MealItem(
+                id: favoriteMeals[index].id,
+                title: favoriteMeals[index].title,
+                imgURL: favoriteMeals[index].imgURL,
+                duration: favoriteMeals[index].duration,
+              );
+            },
+            itemCount: favoriteMeals.length,
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2,
+              mainAxisExtent: 250,
+            ),
+          );
   }
 }

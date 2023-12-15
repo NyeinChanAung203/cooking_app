@@ -36,7 +36,7 @@ class CategoryItem extends StatelessWidget {
             color: Colors.pink.withOpacity(0.3),
             width: 0.5,
           ),
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(10),
           image: DecorationImage(
             image: AssetImage(imgURL),
             fit: BoxFit.cover,

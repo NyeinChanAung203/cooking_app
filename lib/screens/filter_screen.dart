@@ -38,14 +38,14 @@ class _FilterScreenState extends State<FilterScreen> {
   }
 
   saveFilters() {
-              Map<String, bool> filterData = {
-                'gluton': _glutonFree,
-                'luctose': _luctoseFree,
-                'vegan': _vegan,
-              };
+    Map<String, bool> filterData = {
+      'gluton': _glutonFree,
+      'luctose': _luctoseFree,
+      'vegan': _vegan,
+    };
 
-              widget.saveFilters(filterData);
-            }
+    widget.saveFilters(filterData);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -70,13 +70,6 @@ class _FilterScreenState extends State<FilterScreen> {
       drawer: MainDrawer(),
       body: Column(
         children: [
-          Padding(
-            padding: EdgeInsets.all(20),
-            child: Text(
-              'Meal filtered settings',
-              style: Theme.of(context).textTheme.bodyLarge,
-            ),
-          ),
           Expanded(
             child: ListView(
               children: [

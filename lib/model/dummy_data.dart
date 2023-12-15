@@ -394,7 +394,7 @@ final MealsList = [
   Meal(
     id: 'm11',
     title: 'Sushi',
-    imgURL: Assets.images.sushi.path,
+    imgURL: Assets.images.shushi.path,
     categories: ['c2', 'c6', 'c7', 'c8', 'c9'],
     ingredients: [
       '1 ⅓ cups water',
@@ -728,7 +728,7 @@ final MealsList = [
   Meal(
     id: 'm22',
     title: 'Fried Milk',
-    imgURL: Assets.images.friedMilk.path,
+    imgURL: Assets.images.friedMilkjpg.path,
     categories: ['c3', 'c7', 'c8'],
     ingredients: [
       '1 cup coconut milk',
@@ -1002,7 +1002,7 @@ final MealsList = [
   Meal(
     id: 'm30',
     title: 'Chinese Pork Bun',
-    imgURL: Assets.images.chinesePorkBun.path,
+    imgURL: Assets.images.chinesePorkBuns.path,
     categories: ['c3', 'c6', 'c7', 'c8'],
     ingredients: [
       '2 cup all-purpose flour , ½ cup more for dusting',
@@ -1438,7 +1438,7 @@ final MealsList = [
   Meal(
     id: 'm53',
     title: 'Kimchi pancake',
-    imgURL: Assets.images.kimchipancake.path,
+    imgURL: Assets.images.kimchiCheesePancake.path,
     categories: ['c5', 'c7', 'c8'],
     ingredients: [
       '½ pound well-fermented napa cabbage kimchi, chopped into small pieces, plus 2 tablespoons of the brine',
@@ -1632,7 +1632,7 @@ final MealsList = [
   Meal(
     id: 'm59',
     title: 'Kimchi fried rice ',
-    imgURL: Assets.images.kimchifriedrice.path,
+    imgURL: Assets.images.kimchiFriedRice.path,
     categories: ['c5', 'c6', 'c7', 'c8'],
     ingredients: [
       '3 bowls steamed rice (3 cups)',
@@ -1662,7 +1662,7 @@ final MealsList = [
   Meal(
     id: 'm60',
     title: 'Fish-shaped bread with sweet red bean filling',
-    imgURL: Assets.images.fishShape.path,
+    imgURL: Assets.images.fishshape.path,
     categories: ['c5', 'c6', 'c7', 'c8'],
     ingredients: [
       '1 cup all purpose flour',
